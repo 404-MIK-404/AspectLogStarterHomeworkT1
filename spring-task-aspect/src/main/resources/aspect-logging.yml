@@ -1,0 +1,6 @@
+
+api:
+  aspect:
+    logging:
+      enable: true
+      level: error

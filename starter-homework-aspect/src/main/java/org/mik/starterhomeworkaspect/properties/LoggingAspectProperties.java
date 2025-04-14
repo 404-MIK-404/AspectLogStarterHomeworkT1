@@ -11,12 +11,12 @@ public class LoggingAspectProperties {
 
     private boolean enabled;
 
-    private LoggingLevelEnum level = LoggingLevelEnum.INFO;
+    private LoggingLevelEnum level;
 
     @ConstructorBinding
     public LoggingAspectProperties(boolean enabled, LoggingLevelEnum level) {
         this.enabled = enabled;
-        this.level = level;
+        this.level = level == null ? LoggingLevelEnum.INFO : level;
     }
 
     public boolean isEnabled() {

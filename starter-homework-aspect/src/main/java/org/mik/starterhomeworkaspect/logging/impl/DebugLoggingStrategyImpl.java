@@ -13,8 +13,8 @@ public class DebugLoggingStrategyImpl implements LoggingStrategy {
 
 
     @Override
-    public void log(String message) {
-        logger.debug(message);
+    public void log(String message,Object... params) {
+        logger.debug(message,params);
     }
 
     @Override

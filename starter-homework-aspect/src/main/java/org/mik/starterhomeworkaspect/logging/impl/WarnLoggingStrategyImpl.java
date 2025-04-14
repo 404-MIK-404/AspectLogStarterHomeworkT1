@@ -12,8 +12,8 @@ public class WarnLoggingStrategyImpl  implements LoggingStrategy  {
     private final Logger logger = LoggerFactory.getLogger(WarnLoggingStrategyImpl.class);
 
     @Override
-    public void log(String message) {
-        logger.warn(message);
+    public void log(String message,Object... params) {
+        logger.warn(message,params);
     }
 
     @Override

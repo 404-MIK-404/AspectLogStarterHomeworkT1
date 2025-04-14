@@ -15,8 +15,8 @@ public class ErrorLoggingStrategyImpl implements LoggingStrategy  {
 
 
     @Override
-    public void log(String message) {
-        logger.error(message);
+    public void log(String message,Object... params) {
+        logger.error(message,params);
     }
 
     @Override

@@ -14,8 +14,8 @@ public class InfoLoggingStrategyImpl implements LoggingStrategy  {
 
 
     @Override
-    public void log(String message) {
-        logger.info(message);
+    public void log(String message,Object... params) {
+        logger.info(message,params);
     }
 
     @Override

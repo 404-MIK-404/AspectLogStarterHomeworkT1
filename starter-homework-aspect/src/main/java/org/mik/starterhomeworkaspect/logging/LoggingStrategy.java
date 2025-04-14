@@ -5,7 +5,7 @@ import org.mik.starterhomeworkaspect.enums.LoggingLevelEnum;
 
 public interface LoggingStrategy {
 
-    void log(String message);
+    void log(String message,Object... params);
 
     LoggingLevelEnum getLevel();
 
