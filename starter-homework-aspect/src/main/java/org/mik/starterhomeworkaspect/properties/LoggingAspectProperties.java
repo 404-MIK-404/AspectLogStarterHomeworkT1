@@ -1,7 +1,7 @@
 package org.mik.starterhomeworkaspect.properties;
 
 
-import org.mik.starterhomeworkaspect.enums.LoggingLevelEnum;
+import org.slf4j.event.Level;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.bind.ConstructorBinding;
 
@@ -11,12 +11,12 @@ public class LoggingAspectProperties {
 
     private boolean enabled;
 
-    private LoggingLevelEnum level;
+    private Level level;
 
     @ConstructorBinding
-    public LoggingAspectProperties(boolean enabled, LoggingLevelEnum level) {
+    public LoggingAspectProperties(boolean enabled, Level level) {
         this.enabled = enabled;
-        this.level = level == null ? LoggingLevelEnum.INFO : level;
+        this.level = level == null ? Level.INFO : level;
     }
 
     public boolean isEnabled() {
@@ -27,11 +27,11 @@ public class LoggingAspectProperties {
         this.enabled = enabled;
     }
 
-    public LoggingLevelEnum getLevel() {
+    public Level getLevel() {
         return level;
     }
 
-    public void setLevel(LoggingLevelEnum level) {
+    public void setLevel(Level level) {
         this.level = level;
     }
 }
